@@ -10,6 +10,11 @@ def count():
         session['counter'] += 1
     return render_template("index.html")
 
+@app.route('/addTwo')
+def addTwo():
+    session['counter'] +=2
+    return render_template("index.html")
+
 @app.route('/destroy_session')
 def resetCount():
     session.pop('counter')		
